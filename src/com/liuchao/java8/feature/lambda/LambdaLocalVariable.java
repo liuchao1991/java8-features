@@ -13,7 +13,7 @@ public class LambdaLocalVariable {
         // final int num = 1;
         int num = 1;
 
-        Converter<Integer, String> c = (param) -> System.out.println(String.valueOf(param + num));
+        Converter<Integer, String> c = param -> System.out.println(String.valueOf(param + num));
         c.conver(2);
 
         // num = 5; // Error:(16, 93) java: 从lambda 表达式引用的本地变量必须是最终变量或实际上的最终变量
