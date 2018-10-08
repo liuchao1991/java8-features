@@ -50,7 +50,7 @@ public class Stream {
 
         // filter
         // filter 方法用于通过设置的条件过滤出元素。以下代码片段使用 filter 方法过滤出空字符串：
-        Long count = strings.stream().filter(String::isEmpty).count();
+        Long count = strings.stream().filter(string -> !string.isEmpty()).count();
 
         // limit
         // limit 方法用于获取指定数量的流。 以下代码片段使用 limit 方法打印出 10 条数据：
